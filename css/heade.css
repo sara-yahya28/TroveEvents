@@ -1,0 +1,104 @@
+header {
+    position: fixed; /* تغيير الموضع إلى ثابت */
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    background-color: var(--main-color);
+    margin-top: 0; /* إزالة الهامش العلوي */
+}
+
+header .container {
+    display: flex; /* تصحيح خطأ الكتابة من 0flex إلى flex */
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    min-height: 60px; /* الحد الأدنى للارتفاع */
+    padding: 0 20px; /* إضافة مسافة داخلية */
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* تغيير إلى space-between */
+    width: 100%; /* التأكد من أن الناف بار يأخذ كامل العرض */
+}
+
+header nav .toggle-menu {
+    color: #a5b7d6;
+    font-size: 22px;
+    display: none; /* الإخفاء في الشاشات الأكبر */
+}
+
+@media (max-width: 800px) {
+    header nav .toggle-menu {
+        display: block; /* إظهار زر القائمة في الشاشات الأصغر */
+    }
+}
+
+header nav ul {
+    display: flex; /* عرض العناصر في صف */
+    gap: 15px; /* إضافة مسافة بين العناصر */
+}
+
+header nav ul li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-size: 18px; /* تقليل حجم الخط */
+    transition: color 0.3s; /* تأثير التدرج في تغيير اللون */
+    padding: 15px 20px; /* تعديل الحشوة */
+}
+
+header nav ul li a.active,
+header nav ul li a:hover {
+    color: var(--second-color); /* استخدام اللون الثاني عند التفاعل */
+}
+
+.login {
+    cursor: pointer;
+    padding: 5px 15px;
+    border-radius: 10px;
+    background-color: white;
+    color: var(--main-color);
+    font-size: 18px; /* تقليل حجم الخط */
+    margin-top: 10px;
+}
+
+header nav .form {
+    width: 40px;
+    height: 30px;
+    position: relative;
+    margin-left: 30px;
+    border-left: 1px solid white;
+}
+
+header nav .form i {
+    color: white;
+    position: absolute;
+    font-size: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+}
+
+/* تحسين التصميم للتجاوب */
+@media (max-width: 800px) {
+    header nav ul {
+        display: none; /* إخفاء العناصر عند تصغير الشاشة */
+    }
+    
+    header nav .toggle-menu:hover + ul {
+        display: flex; /* عرض القائمة عند النقر */
+        flex-direction: column; /* ترتيب عمودي */
+        position: absolute;
+        top: 100%; /* موقع القائمة تحت الشريط */
+        left: 0;
+        width: 100%; /* عرض كامل */
+        background-color: rgba(0, 0, 0, 0.7); /* خلفية مظلمة شفافة */
+    }
+
+    header nav ul li a {
+        padding: 15px; /* ضبط الحشوة */
+        font-size: 20px; /* حجم خط أكبر في القائمة المنسدلة */
+    }
+}

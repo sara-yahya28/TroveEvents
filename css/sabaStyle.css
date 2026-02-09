@@ -1,0 +1,207 @@
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #a5b7d6;
+      direction: rtl;
+      box-sizing: border-box;
+      padding: 30px;
+    }
+
+    /* تنسيق الناف بار */
+    .navbar {
+      width: 100%;
+      background-color: #bc87b8;
+      color: #fff;
+      padding: 0px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      z-index: 1000;
+      direction: ltr;
+
+    }
+
+    .navbar h2 {
+      margin-left: 20px;
+      /* تعديل المحاذاة */
+      font-size: 24px;
+    }
+
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      margin-right: 20px;
+      /* تعديل المحاذاة */
+    }
+
+    .navbar ul li {
+      display: inline;
+    }
+
+    .navbar ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    .navbar ul li a:hover {
+      color: #ddd;
+    }
+
+    .navbar img {
+      width: 40px;
+      /* Adjust size as needed */
+      height: 40px;
+      /* Adjust size as needed */
+      border-radius: 50%;
+      margin-left: 20px;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 76vh;
+      width: 70%;
+      padding: 40px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      margin-top: 60px;
+    }
+
+    .image-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+      width: 100%;
+      height: 100%;
+    }
+
+    .image-container img {
+      max-width: 500px;
+      height: 100%;
+      margin-top: 20px;
+      border-radius: 10px;
+    }
+      .image-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        flex-wrap: wrap;
+        width: 100%;
+        height: 100%;
+      }
+
+      .image-container img {
+        max-width: 500px;
+        /* تكبير الصورة */
+        height: 80%;
+        margin-top: 20px;
+        /* إضافة مسافة من الأعلى لتحريك الصورة للأسفل */
+        border-radius: 10px;
+      border-radius: 10px;
+    }
+
+    .details-container {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .form-container label {
+      display: block;
+      margin: 0px;
+    }
+
+    .date-picker {
+      width: 30%;
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 10px;
+      border: 3px solid #bc87b8;
+      margin-bottom: 0px;
+
+    }
+
+    .message {
+      height: 50px;
+      resize: none;
+      border: 3px solid #bc87b8;
+      width: 50%;
+    }
+
+    button {
+      padding: 10px 10px;
+      border: none;
+      border-radius: 9px;
+      cursor: pointer;
+    }
+
+    .back-button {
+      background-color: #bc87b8;
+      color: #fff;
+    }
+
+    .next-button {
+      background-color: #bc87b8;
+      color: #fff;
+    }
+
+    .confirm-button {
+      margin-top: 10px;
+      background-color: #bc87b8;
+      color: #fff;
+      width: 30%;
+    }
+
+    .form-buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+      width: 100%;
+    }
+
+
+    .form-buttons {
+      display: flex;
+      gap: 30px;
+      /* المسافة بين الأزرار */
+      justify-content: center;
+      /* محاذاة الأزرار للوسط (يمكن تغييرها حسب الحاجة) */
+      align-items: center;
+      /* لضبط المحاذاة العمودية */
+    }
+
+    button {
+      padding: 10px 10px;
+      font-size: 15px;
+      cursor: pointer;
+    }
+
+    .cta {
+      background-color: white;
+      border-radius: 50px;
+      color: #bc87b8 !important;
+      padding: 5px 10px;
+      text-decoration: dotted;
+
+    }
+
+    .cta:hover {
+      border: #6e4b6b solid 1px;
+      background-color: #bc87b8;
+      color: white !important;
+    }

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css\palaceStyle.css">
+   <link rel="shortcut icon" href="images/PHOTO-2024-11-11-16-56-28.jpg" type="image/x-icon">
+
+  <title>واجهة المستخدم</title>
+ 
+</head>
+
+<body>
+  <nav class="navbar">
+    <ul>
+      <li><a href="usersignin.php" target="_blank" class="cta">تسجيل الدخول</a></li>
+      <li><a href="cart1.html"> الحجوزات</a></li>
+      <li><a href="reciept.html"> الفاتوره</a></li>
+      <li><a href="new.html">من نحن</a></li>
+      <li><a href="#portfolio">الخدمات</a></li>
+      <li><a href="index.html" class="active">الرئيسية</a></li>
+      <!-- check last link if downloading -->
+    </ul>
+    <div style="display: flex; align-items: center;">
+      <h3>Trova palaces</h3>
+      <a href="index.html">
+        <img src="image\PHOTO-2024-11-11-16-56-28.jpg" alt="Logo"> <!-- Add your logo image path here -->
+      </a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="image-container">
+      <img src="images\w1.jpg" alt="صورة توضيحية" hspace="20">
+      <div class="details-container">
+        <h1>قاعة الفخامة</h1>
+        <p>
+          تتسع لـ 500 شخص، مزودة بتجهيزات صوتية وإضاءة حديثة.<br>
+          الموقع:الشيخ عثمان<br>
+          السعر:200,000ريال
+        </p>
+        <label for="date">تاريخ المناسبة:</label>
+        <input type="date" id="date" name="date" class="date-picker" required>
+        <label>
+          <h5>التوقيت:</h5>
+          <input type="radio" name="option1" value="option1" required> صباحي
+          <input type="radio" name="option1" value="option3" required> مسائى
+        </label>
+
+        <label>
+          <h5>نوع المناسبة :</h5>
+          <input type="radio" name="option" value="option1" required> نسائية
+          <input type="radio" name="option" value="option2" required> رجالية
+          <input type="radio" name="option" value="option3" required> مؤتمر
+          <input type="radio" name="option" value="option4" required> اكاديمي
+        </label>
+        <br>
+        ملاحظاتك:
+        <textarea class="message" placeholder="اكتب ملاحظاتك هنا..."></textarea>
+      </div>
+    </div>
+
+    <div class="form-buttons">
+      <button type="button" class="back-button" onclick="window.location.href='amasipl.html'">رجوع</button>
+      <button type="button" class="confirm-button" onclick="addToCart('  قاعة الفخامة', 120000)">تأكيد</button>
+      <button type="submit" class="next-button" onclick="window.location.href='sabapl.html'">التالي</button>
+    </div>
+    <script src="js/fakhamaJS.js"></script>
+
+</body>
+
+</html>

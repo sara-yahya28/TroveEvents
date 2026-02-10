@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>واجهة المستخدم</title>
+<link rel="stylesheet" href="css\sabaStyle.css">
+</head>
+
+<body>
+  <nav class="navbar">
+    <ul>
+      <li><a href="usersignin.php" target="_blank" class="cta">تسجيل الدخول</a></li>
+      <li><a href="cart1.html"> الحجوزات</a></li>
+      <li><a href="reciept.html"> الفاتورة</a></li>
+      <li><a href="new.html">من نحن</a></li>
+      <li><a href="#portfolio">الخدمات</a></li>
+      <li><a href="palacesfn.html">القاعات</a></li>
+      <li><a href="index.html" class="active">الرئيسية</a></li>
+      <!-- check last link if downloading -->
+    </ul>
+    <div style="display: flex; align-items: center;">
+      <h3>Trova palaces</h3>
+      <a href="index.html">
+        <img src="images\PHOTO-2024-11-11-16-56-28.jpg" alt="Logo"> <!-- Add your logo image path here -->
+      </a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="image-container">
+      <img src="images\IMG_1414.JPG" alt="صورة توضيحية" hspace="20">
+      <div class="details-container">
+        <h1>قاعة سبأ</h1>
+        <p>
+          تصميم فاخر ومناسبة للحفلات الكبيرة، تتسع لـ 600 شخص.<br>
+          الموقع:خورمكسر<br>
+          السعر:200,000ريال
+        </p>
+        <label for="date">تاريخ المناسبة:</label>
+        <input type="date" id="date" name="date" class="date-picker" required>
+        <label>
+          <h5>التوقيت:</h5>
+          <input type="radio" name="option1" value="option1" required> صباحي
+          <input type="radio" name="option1" value="option3" required> مسائى
+        </label>
+
+        <label>
+          <h5>نوع المناسبة :</h5>
+          <input type="radio" name="option" value="option1" required> نسائية
+          <input type="radio" name="option" value="option2" required> رجالية
+          <input type="radio" name="option" value="option3" required> مؤتمر
+          <input type="radio" name="option" value="option4" required> اكاديمي
+        </label>
+        <br>
+        ملاحظاتك:
+        <textarea class="message" placeholder="اكتب ملاحظاتك هنا..."></textarea>
+      </div>
+    </div>
+
+    <div class="form-buttons">
+      <button type="button" class="back-button" onclick="window.location.href='fakhamapl.html'">رجوع</button>
+      <button type="button" class="confirm-button" onclick="addToCart('  قاعة سبأ', 120000)">تأكيد</button>
+      <button type="submit" class="next-button" onclick="window.location.href='alaliapl.html'">التالي</button>
+    </div>
+    <script>
+      function addToCart(name, price) {
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        cart.push({ name, price });
+        let dateAdded = new Date().toLocaleString(); // حفظ الوقت والتاريخ
+        cart.push({ name, price, dateAdded });
+        localStorage.setItem("cart", JSON.stringify(cart));
+        alert("تمت إضافة حجزك  !");
+      }
+    </script>
+</body>
+
+</html>

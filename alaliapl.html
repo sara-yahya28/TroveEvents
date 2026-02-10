@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>قاعة العلياء </title>
+  <link rel="stylesheet">
+  <link rel="shortcut icon" href="images/PHOTO-2024-11-11-16-56-28.jpg" type="image/x-icon">
+<link rel="stylesheet" href="css/palaceStyle.css">
+</head>
+
+<body>
+  <nav class="navbar">
+    <ul>
+      <li><a href="usersignin.php" target="_blank" class="cta">تسجيل الدخول</a></li>
+      <li><a href="cart1.html"> الحجوزات</a></li>
+      <li><a href="reciept.html"> الفاتورة</a></li>
+      <li><a href="new.html">من نحن</a></li>
+      <li><a href="#portfolio">الخدمات</a></li>
+      <li><a href="#contact" class="active">الرئيسية</a></li>
+      <!-- check last link if downloading -->
+    </ul>
+    <div style="display: flex; align-items: center;">
+      <h3>Trova palaces</h3>
+      <a href="index.html">
+        <img src="images/PHOTO-2024-11-11-16-56-28.jpg" alt="Logo"> <!-- Add your logo image path here -->
+      </a>
+    </div>
+
+  </nav>
+
+  <div class="container">
+    <h1>قاعة العلياء</h1>
+    <div class="image-container">
+      <img src="images/IMG_1415.JPG" alt="صورة توضيحية" hspace="20">
+      <div class="details-container">
+        <p>
+          قاعات مميزة بسعة 200 شخص، مثالية للحفلات الصغيرة.<br>
+          الموقع:خورمكسر<br>
+
+          السعر:100,000ريال
+        </p>
+        <label for="date">تاريخ المناسبة:</label>
+        <input type="date" id="date" name="date" class="date-picker" required>
+        <label>
+          <h5>التوقيت:</h5>
+          <input type="radio" name="option1" value="option1" required> صباحي
+          <input type="radio" name="option1" value="option3" required> مسائى
+        </label>
+
+        <label>
+          <h5>نوع المناسبة :</h5>
+          <input type="radio" name="option" value="option1" required> نسائية
+          <input type="radio" name="option" value="option2" required> رجالية
+          <input type="radio" name="option" value="option3" required> مؤتمر
+          <input type="radio" name="option" value="option4" required> اكاديمي
+        </label>
+        <br>
+        ملاحظاتك:
+        <textarea class="message" placeholder="اكتب ملاحظاتك هنا..."></textarea>
+      </div>
+      <div class="form-buttons">
+        <button type="button" class="back-button" onclick="window.location.href='sabapl.html'">رجوع</button>
+        <button type="button" class="confirm-button" onclick="addToCart('  قاعة العلياء', 120000)">تأكيد</button>
+        <button type="submit" class="next-button" onclick="window.location.href='amasipl.html'">التالي</button>
+      </div>
+    </div>
+
+<script src="js/alaliapl.js"></script>
+<a href=""></a>
+</body>
+
+</html>

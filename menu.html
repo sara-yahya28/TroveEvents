@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>قائمة الطعام</title>
+<link rel="stylesheet" href="css\navbar.css">
+<link rel="stylesheet" href="css\menu.css">
+ <link rel="shortcut icon" href="images/PHOTO-2024-11-11-16-56-28.jpg" type="image/x-icon">
+<style>
+       
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="usersignin.php" target="_blank" class="cta">تسجيل الدخول</a></li>
+            <li><a href="cart1.html"> الحجوزات</a></li>
+            <li><a href="reciept.html"> الفاتورة</a></li>
+            <li><a href="new.html">من نحن</a></li>
+            <li><a href="index.html">الخدمات</a></li>
+            <li><a href="index.html" class="active">الرئيسية</a></li>
+        </ul>
+        <div style="display: flex; align-items: center;">
+          <h3>Trova palaces</h3>
+          <a href="index.html">
+            <img src="images\PHOTO-2024-11-11-16-56-28.jpg" alt="Logo"> <!-- Add your logo image path here -->
+          </a>
+        </div>
+      </nav>
+
+
+    <header>
+        <h1 class="h">قائمة الطعام</h1>
+        <font size="5" class="h">احدد الكمية، ثم قم بالحجز</font>
+    </header>
+
+        <form method="post" onsubmit="submitOrder();">
+        <br>
+        <section class="menu-section" id="menu">
+            <div class="menu-item">
+                <img src="images\Fajita Chicken Cheesesteak Sandwiches.jpg" alt="فاهيتا">
+                <h3>ساندوتش فاهيتا دجاج</h3>
+                <font size="4">السعر للحبة :2000 </font><br>
+                <label for="fahita-qty">الكمية:</label>
+                <input type="number" id="fahita-qty" name="fahita-qty" min="0" value="0">
+            </div>
+            <div class="menu-item">
+                <img src="images/shawarma.jpg" id="shawarma" alt="شاورما">
+                <h3>شاورما</h3>
+                <font size="4">السعر للحبة :1500 </font><br>
+                <label for="shw-qty">الكمية:</label>
+                <input type="number" id="shw-qty" name="shw-qty" min="0" value="0">
+            </div>
+            <div class="menu-item">
+                <img src="images\d201e9814ca37981301629a106731c03.jpg" alt="برقر دجاج كرسبي">
+                <h3>برجر دجاج كرسبي</h3>
+                <font size="4">السعر للحبة :4500 </font><br>
+                <label for="brg-qty">الكمية:</label>
+                <input type="number" id="brg-qty" name="brg-qty" min="0" value="0">
+            </div>
+            <div class="menu-item">
+                <img src="images\bb1d45a140be6b3a63e4e05481772254.jpg" alt="ميني كب كيك">
+                <h3>ميني كب كيك</h3>
+                <font size="4">السعر للحبة :2500 </font><br>
+                <label for="cupcake-qty">الكمية:</label>
+                <input type="number" id="cupcake-qty" name="cupcake-qty" min="0" value="0">
+            </div>
+            <div class="menu-item">
+                <img src="images\zurbian.jpg" alt="زربيان">
+                <h3> زربيان لحم</h3>
+                <font size="4">السعر للصحن :7500 </font><br>
+                <label for="zurbian-qty">الكمية:</label>
+                <input type="number" id="zurbian-qty" name="zurbian-qty" min="0" value="0">
+            </div>
+            <div class="menu-item">
+                <img src="images\food box.jpg" alt="بوكس معجنات ميني">
+                <h3> بوكس معجنات ميني</h3>
+                <font size="4">السعر للبوكس :3500 </font><br>
+                <label for="mini-pastries-qty">الكمية:</label>
+                <input type="number" id="mini-pastries-qty" name="mini-pastries-qty" min="0" value="0">
+            </div>
+        </section><br>
+        <center>
+
+            <button class="btn">أحجز</button>
+        </center>
+        <br><br>
+    </form>
+
+    <script>
+        let order = [];
+
+        function submitOrder() {
+            const fahitaQty = document.getElementById('fahita-qty').value;
+            const shwQty = document.getElementById('shw-qty').value;
+            const brgQty = document.getElementById('brg-qty').value;
+            const cupcakeQty = document.getElementById('cupcake-qty').value;
+            const zurbianQty = document.getElementById('zurbian-qty').value;
+            const miniPastriesQty = document.getElementById('mini-pastries-qty').value;
+
+            if (fahitaQty == 0 && shwQty == 0 && brgQty == 0 && cupcakeQty == 0 && zurbianQty == 0 && miniPastriesQty == 0) {
+                alert("يرجى تحديد كمية على الأقل من صنف واحد.");
+                return;
+            }
+
+            let orderDetails = `تفاصيل الطلب:\n\n`;
+            let total = 0;
+
+            if (fahitaQty > 0) {
+                orderDetails += `${fahitaQty} × ساندوتش فاهيتا دجاج = ${fahitaQty * 2000} ريال\n`;
+                total += fahitaQty * 2000;
+            }
+            if (shwQty > 0) {
+                orderDetails += `${shwQty} × شاورما = ${shwQty * 1500} ريال\n`;
+                total += shwQty * 1500;
+            }
+            if (brgQty > 0) {
+                orderDetails += `${brgQty} × برقر دجاج كرسبي = ${brgQty * 4500} ريال\n`;
+                total += brgQty * 4500;
+            }
+            if (cupcakeQty > 0) {
+                orderDetails += `${cupcakeQty} × ميني كب كيك = ${cupcakeQty * 2500} ريال\n`;
+                total += cupcakeQty * 2500;
+            }
+            if (zurbianQty > 0) {
+                orderDetails += `${zurbianQty} × زربيان لحم = ${zurbianQty * 7500} ريال\n`;
+                total += zurbianQty * 7500;
+            }
+            if (miniPastriesQty > 0) {
+                orderDetails += `${miniPastriesQty} × بوكس معجنات ميني = ${miniPastriesQty * 3500} ريال\n`;
+                total += miniPastriesQty * 3500;
+            }
+
+            orderDetails += `إجمالي المبلغ: ${total} ريال`;
+
+            alert(orderDetails);
+        }
+
+    </script>
+</body>
+
+</html>
